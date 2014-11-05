@@ -1,0 +1,46 @@
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Helvetica, sans-serif;
+	background-color: #ddd;
+	color: #666;
+	overflow-y: scroll;
+}
+
+a:link { color: #369; }
+a:visited { color: #639; }
+
+h1 { font-size: 1.7em; }
+
+.main {
+	background: #eee;
+	margin: 1em auto;
+	padding: 1em 1.9em .5em;
+	max-width: 40em;
+	border: .1em solid #ccc;
+	border-radius: .5em;
+}
+	header,
+	header a:link,
+	footer,
+	footer a:link {
+		color: #aaa;
+		text-decoration: none;
+	}
+	header {
+		border-bottom: .1em solid #ddd;
+	}
+		.title {
+			line-height: 0;
+		}
+		.title a {
+			color: #999;
+		}
+	footer {
+		text-align: right;
+	}
+
+

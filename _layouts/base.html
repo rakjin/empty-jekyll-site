@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<title>
+  {% if page.title %}
+    {{ page.title }}
+  {% else %}
+    {{ site.data.info.title }}
+  {% endif %}
+</title>
+<link rel="stylesheet" href="//necolas.github.io/normalize.css/latest/normalize.css">
+<link rel="stylesheet" href="/res/base.css">
+</head>
+<body>
+
+<div class="main">
+  <header>
+    <h3 class="title">
+      <a href="/">
+        {{ site.data.info.title }}
+      </a>
+    </h3>
+    <p class="description">{{ site.data.info.description }}</p>
+  </header>
+
+  {{ content }}
+
+  <footer>
+    <p>
+      {% if site.data.info.author.url %}
+        <a href="{{ site.data.info.author.url }}">
+          {{ site.data.info.author.name }}
+        </a>
+      {% else %}
+        {{ site.data.info.author.name }}
+      {% endif %}
+    </p>
+  </footer>
+</div>
+
+</body>
+</html>
