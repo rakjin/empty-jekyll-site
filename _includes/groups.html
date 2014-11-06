@@ -1,15 +1,15 @@
 
 <ul>
 
-{% assign groups = site[group_type] %}
+{% assign groups = site[group_type] | sort %}
 
 {% for group in groups %}
-  {% assign name = group[0] %}
+  {% assign key = group[0] %}
   <li>
-    <h2>{{ name }}</h2>
+    <h2>{{ key }}</h2>
     <ol>
-    {% for post in groups[name] %}
-      <li>{{ post.title }}</li>
+    {% for post in site[group_type][key] %}
+      <li>{{ post.title }}</li> 
     {% endfor %}
     </ol>
   </li>
