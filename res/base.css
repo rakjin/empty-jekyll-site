@@ -73,6 +73,17 @@ p { line-height: 1.7; }
 		border: 0;
 		border-radius: 0;
 	}
+
+	nav li {
+		display: list-item;
+		margin: 0;
+	}
+
+	nav,
+	.title,
+	.description {
+		float: none;
+	}
 }
 
 
