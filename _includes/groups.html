@@ -1,0 +1,35 @@
+
+<ul>
+
+{% assign groups = site[group_type] %}
+
+{% for group in groups %}
+  {% assign name = group[0] %}
+  <li>
+    <h2>{{ name }}</h2>
+    <ol>
+    {% for post in groups[name] %}
+      <li>{{ post.title }}</li>
+    {% endfor %}
+    </ol>
+  </li>
+{% endfor %}
+
+{% assign ungrouped_posts_exist = false %}
+{% capture ungrouped %}
+  <h2>{{ ungrouped_title }}</h2>
+  <ol>
+  {% for post in site.posts %}
+    {% if post[group_type].size == 0 %}
+      {% assign ungrouped_posts_exist = true %}
+      <li>{{ post.title }}</li>
+    {% endif %}
+  {% endfor %}
+  </ol>
+{% endcapture %}
+
+{% if ungrouped_posts_exist %}
+  <li>{{ ungrouped }}</li>
+{% endif %}
+
+</ul>
