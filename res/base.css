@@ -120,10 +120,15 @@ ol.index {
 	list-style: none;
 	padding: 0;
 }
-.index > li {
+.index li {
 	margin: 0;
 	padding: .7em 1em .1em;
 }
+.index.tags > li,
+.index.categories > li {
+	padding-bottom: 1em;
+}
+
 .index li h1,
 .index li h2,
 .index li h3,

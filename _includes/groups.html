@@ -7,7 +7,7 @@
     <h2>{{ key }}</h2>
     <ol reversed>
     {% for post in site[include.group_type][key] %}
-      <li><p>{% include link_to_post.html post=post %}</p></li>
+      <li>{% include link_to_post.html post=post %}</li>
     {% endfor %}
     </ol>
   </li>
@@ -20,7 +20,7 @@
   {% for post in site.posts %}
     {% if post[include.group_type].size == 0 %}
       {% assign ungrouped_posts_exist = true %}
-      <li><p>{% include link_to_post.html post=post %}<p></li>
+      <li>{% include link_to_post.html post=post %}</li>
     {% endif %}
   {% endfor %}
   </ol>
