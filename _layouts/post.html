@@ -5,9 +5,10 @@ layout: base
 
 {{ content }}
 
+<div class="group">
 {% if page.categories.size > 0 %}
   Posted in
-  <ul class="group categories">
+  <ul class="categories">
   {% for category in page.categories %}
     <li>
       <a href="/categories.html#{{ category }}">{{ category }}</a>
@@ -22,7 +23,7 @@ layout: base
   {% else %}
     Tags:
   {% endif %}
-  <ul class="group tags">
+  <ul class="tags">
   {% for tag in page.tags %}
     <li>
       <a href="/tags.html#{{ tag }}">{{ tag }}</a>
@@ -30,5 +31,6 @@ layout: base
   {% endfor %}
   </ul>
 {% endif %}
+</div>
 
 </article>

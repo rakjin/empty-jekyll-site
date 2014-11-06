@@ -94,4 +94,38 @@ p { line-height: 1.7; }
 	}
 }
 
+.group {
+	color: #999;
+	font-size: .8em;
+	margin-top: 3em;
+}
+.group ol,
+.group ul {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+.group a:link,
+.group a:visited {
+	text-decoration: none;
+	color: #fff;
+}
+
+.group li {
+	display: inline-block;
+	background: #abc;
+	padding: .1em .3em;
+	border-radius: .3em;
+	border: 1px solid #9ab;
+}
+	.group .categories a:link,
+	.group .categories a:visited {
+		color: #999;
+	}
+	.group .categories li {
+		background: #fed;
+		border-color: #edc;
+	}
+
 
