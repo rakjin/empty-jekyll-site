@@ -95,7 +95,7 @@ pre, code, kbd, samp {
 		text-align: right;
 	}
 
-.group, .toc {
+.group {
 	color: $muted-color-1;
 	font-size: .8em;
 	margin-top: 3em;
@@ -130,7 +130,7 @@ pre, code, kbd, samp {
 		border-color: $cat-color*.9;
 	}
 }
-.toc {
+.group.toc {
 	margin: 0 0 2em;
 }
 
