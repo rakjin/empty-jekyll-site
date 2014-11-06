@@ -45,12 +45,11 @@ pre, code, kbd, samp {
 	border-radius: .3em;
 	box-shadow: 0 1em 5em 0 #eee;
 }
-	header,
-	header a:link,
-	footer,
-	footer a:link {
-		color: #ccc;
-		text-decoration: none;
+	header, footer {
+		&, & a:link {
+			color: #ccc;
+			text-decoration: none;
+		}
 	}
 	header {
 		border-bottom: 1px solid #ddd;
@@ -66,19 +65,19 @@ pre, code, kbd, samp {
 		}
 		nav {
 			float: right;
-		}
-			nav ul,
-			nav ol {
+
+			ul, ol {
 				margin: .5em 0 0;
 			}
-			nav li {
+			li {
 				display: inline-block;
 				margin: 0 .5em;
 			}
-			nav a:link,
-			nav a:visited {
+			a:link,
+			a:visited {
 				color: #999;
 			}
+		}
 		.description {
 			clear: both;
 			float: left;
@@ -175,18 +174,19 @@ ul.index {
 		box-shadow: none;
 	}
 
-	nav ul,
-	nav ol {
-		padding: 0 1em;
-	}
+	nav {
+		ul, ol {
+			padding: 0 1em;
+		}
 
-	nav li {
-		display: list-item;
-	}
+		li {
+			display: list-item;
 
-	nav li a {
-		display: inline-block;
-		padding: .5em 0;
+			a {
+				display: inline-block;
+				padding: .5em 0;
+			}
+		}
 	}
 
 	nav,
