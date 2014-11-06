@@ -144,9 +144,12 @@ ul.index {
 		margin: 0;
 		padding: .7em 1em .1em;
 	}
-	&.tags > li,
-	&.categories > li {
-		padding-bottom: 1em;
+	&.tags, &.categories {
+		& li > ol, & li > ul {
+			list-style: none;
+			padding: 0;
+		}
+		& > li { padding-bottom: 1em; }
 	}
 
 	li {
