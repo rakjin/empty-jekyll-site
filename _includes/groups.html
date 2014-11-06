@@ -53,7 +53,12 @@
   {% capture contents_result %}{{ contents_result }}{{ contents }}{% endcapture %}
 {% endif %}
 
-{{ toc_result }}
+
+<div class="toc">
+  <ul class="{{ include.group_type }}">
+    {{ toc_result }}
+  </ul>
+</div>
 
 <ul class="index {{ include.group_type }}">
   {{ contents_result }}
