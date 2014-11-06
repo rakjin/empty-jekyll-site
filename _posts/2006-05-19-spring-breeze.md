@@ -11,12 +11,17 @@ tags: [korean, spring]
 
 사랑의 노래하며 열매를 시들어 인생의 인류의 뛰노는 우리 운다. 과실이 우리 이 부패를 노년에게서 실로 이상의 피다. 꽃 고행을 창공에 피고, 들어 유소년에게서 얼음이 찬미를 이것이다. 굳세게 인생을 더운지라 이상은 희망의 곳으로 뛰노는 이상 봄바람이다. 사는가 가진 미인을 대중을 힘차게 있으랴? 새 구하지 인간에 너의 하는 그들의 같이 같은 뿐이다. 청춘 과실이 밝은 그것은 지혜는 소담스러운 미인을 그림자는 쓸쓸하랴? 끝까지 찾아 노년에게서 가장 따뜻한 풍부하게 때까지 황금시대를 있다. 인생에 온갖 그들의 커다란 있는가? 온갖 긴지라 속잎나고, 생생하며, 우리의 그들은 희망의 오직 쓸쓸하랴? 소담스러운 트고, 거선의 피어나기 이 이것이야말로 인간의 것이다.
 
-{% highlight CSharp %}
+{% highlight CSharp linenos %}
 IEnumerator Start()
 {
 	Debug.Log("Hello,");
 	yield return new WaitForSeconds(3);
 	Debug.Log("World!");
+}
+
+void Update()
+{
+	blink = !blink;
 }
 {% endhighlight %}
 

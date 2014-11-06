@@ -21,6 +21,15 @@ p { line-height: 1.7; }
 	color: #ccc;
 }
 
+pre {
+	padding: .5em;
+	background: #f7f7f7;
+}
+
+pre, code, kbd, samp {
+	font-family: Menlo, Monaco, 'Courier New', monospace;
+}
+
 .main {
 	margin: 1em auto;
 	padding: 2em 3em 1em;
