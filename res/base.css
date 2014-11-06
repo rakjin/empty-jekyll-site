@@ -22,7 +22,7 @@ p { line-height: 1.7; }
 }
 
 pre {
-	padding: .5em;
+	padding: .5em .7em;
 	background: #f7f7f7;
 }
 
@@ -141,13 +141,11 @@ ol.index {
 
 .index.tags li:target {
 	background: #f0fdff;
-	border: 1px solid #def;
-	border-radius: 1em;
+	border: 1px dotted #def;
 }
 .index.categories li:target {
 	background: #fffdf0;
-	border: 1px solid #fed;
-	border-radius: 1em;
+	border: 1px dotted #fed;
 }
 
 
