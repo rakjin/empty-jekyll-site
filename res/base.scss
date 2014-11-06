@@ -2,9 +2,17 @@
 ---
 
 $primary-color: #666;
+$muted-color-1: #999;
+$muted-color-2: #ccc;
 
 $link-color: #369;
 $visited-color: #639;
+
+$bluish: #abc;
+$yellowish: #fed;
+
+$tag-color: $bluish;
+$cat-color: $yellowish;
 
 * {
 	box-sizing: border-box;
@@ -25,7 +33,7 @@ p { line-height: 1.7; }
 .post-date {
 	margin-left: .5em;
 	font-size: .8em;
-	color: #ccc;
+	color: $muted-color-2;
 }
 
 pre {
@@ -47,7 +55,7 @@ pre, code, kbd, samp {
 }
 	header, footer {
 		&, & a:link {
-			color: #ccc;
+			color: $muted-color-2;
 			text-decoration: none;
 		}
 	}
@@ -61,7 +69,7 @@ pre, code, kbd, samp {
 			line-height: 0;
 		}
 		.title a {
-			color: #999;
+			color: $muted-color-1;
 		}
 		nav {
 			float: right;
@@ -75,7 +83,7 @@ pre, code, kbd, samp {
 			}
 			a:link,
 			a:visited {
-				color: #999;
+				color: $muted-color-1;
 			}
 		}
 		.description {
@@ -88,7 +96,7 @@ pre, code, kbd, samp {
 	}
 
 .group {
-	color: #999;
+	color: $muted-color-1;
 	font-size: .8em;
 	margin-top: 3em;
 
@@ -107,19 +115,19 @@ pre, code, kbd, samp {
 
 	li {
 		display: inline-block;
-		background: #abc;
+		background: $tag-color;
 		padding: .1em .3em;
 		border-radius: .3em;
-		border: 1px solid #9ab;
+		border: 1px solid $tag-color*.9;
 	}
 
 	.categories a:link,
 	.categories a:visited {
-		color: #999;
+		color: $muted-color-1;
 	}
 	.categories li {
-		background: #fed;
-		border-color: #edc;
+		background: $cat-color;
+		border-color: $cat-color*.9;
 	}
 }
 
@@ -149,12 +157,12 @@ ul.index {
 	}
 
 	&.tags li:target {
-		background: #f0fdff;
-		border: 1px dotted #def;
+		background: $tag-color*1.37;
+		border: 1px dotted $tag-color*1.2;
 	}
 	&.categories li:target {
-		background: #fffdf0;
-		border: 1px dotted #fed;
+		background: $cat-color*1.05;
+		border: 1px dotted $cat-color*.9;
 	}
 }
 
