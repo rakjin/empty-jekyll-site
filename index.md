@@ -3,6 +3,6 @@
 # Recent Posts
 
 {% for post in site.posts %}
-  - [{{ post.title }}]({{ post.url }})
+  - {% include link_to_post.html %}
 {% endfor %}
   - [not visited link](http://hell-not-exists.com)

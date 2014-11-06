@@ -15,6 +15,13 @@ a:visited { color: #639; }
 h1 { font-size: 1.7em; }
 p { line-height: 1.7; }
 
+.post_date {
+	margin-left: .5em;
+	font-family: Monaco, 'Courier New', monospace;
+	font-size: .8em;
+	color: #999;
+}
+
 .main {
 	margin: 1em auto;
 	padding: 2em 3em 1em;

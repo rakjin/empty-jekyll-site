@@ -7,9 +7,9 @@
   {% assign key = group[0] %}
   <li>
     <h2>{{ key }}</h2>
-    <ol>
+    <ol reversed>
     {% for post in site[group_type][key] %}
-      <li>{{ post.title }}</li> 
+      <li><p>{% include link_to_post.html %}</p></li>
     {% endfor %}
     </ol>
   </li>
@@ -18,11 +18,11 @@
 {% assign ungrouped_posts_exist = false %}
 {% capture ungrouped %}
   <h2>{{ ungrouped_title }}</h2>
-  <ol>
+  <ol reversed>
   {% for post in site.posts %}
     {% if post[group_type].size == 0 %}
       {% assign ungrouped_posts_exist = true %}
-      <li>{{ post.title }}</li>
+      <li><p>{% include link_to_post.html %}<p></li>
     {% endif %}
   {% endfor %}
   </ol>
