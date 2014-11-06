@@ -25,8 +25,8 @@ p { line-height: 1.7; }
 	margin: 1em auto;
 	padding: 2em 3em 1em;
 	max-width: 40em;
-	border: 1px solid #ddd;
-	border-radius: .5em;
+	border: 1px solid #eee;
+	border-radius: .3em;
 }
 	header,
 	header a:link,
