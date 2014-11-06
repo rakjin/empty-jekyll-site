@@ -1,31 +1,60 @@
 
 {% assign groups = site[include.group_type] | sort %}
+{% assign toc_result = '' %}
+{% assign contents_result = '' %}
 
 {% for group in groups %}
   {% assign key = group[0] %}
-  <li id="{{ key }}">
-    <h2>{{ key }}</h2>
-    <ol reversed>
-    {% for post in site[include.group_type][key] %}
-      <li>{% include link_to_post.html post=post %}</li>
-    {% endfor %}
-    </ol>
-  </li>
+  {% capture toc %}
+    <li><a href="#{{ key }}">{{ key }}</a></li>
+  {% endcapture %}
+  {% capture toc_result %}{{ toc_result }}{{ toc }}{% endcapture %}
+  {% capture contents %}
+    <li id="{{ key }}">
+      <h2>{{ key }}</h2>
+      <ol reversed>
+      {% for post in site[include.group_type][key] %}
+        <li>{% include link_to_post.html post=post %}</li>
+      {% endfor %}
+      </ol>
+    </li>
+  {% endcapture %}
+  {% capture contents_result %}{{ contents_result }}{{ contents }}{% endcapture %}
 {% endfor %}
 
 {% assign ungrouped_posts_exist = false %}
-{% capture ungrouped %}
-  <h2>{{ include.ungrouped_title }}</h2>
-  <ol reversed>
-  {% for post in site.posts %}
-    {% if post[include.group_type].size == 0 %}
-      {% assign ungrouped_posts_exist = true %}
+{% assign ungrouped_contents_result = '' %}
+{% for post in site.posts %}
+  {% if post[include.group_type].size == 0 %}
+    {% assign ungrouped_posts_exist = true %}
+    {% capture ungrouped_contents %}
       <li>{% include link_to_post.html post=post %}</li>
-    {% endif %}
-  {% endfor %}
-  </ol>
-{% endcapture %}
+    {% endcapture %}
+    {% capture ungrouped_contents_result %}
+      {{ ungrouped_contents_result }}
+      {{ ungrouped_contents }}
+    {% endcapture %}
+  {% endif %}
+{% endfor %}
 
 {% if ungrouped_posts_exist %}
-  <li>{{ ungrouped }}</li>
+  {% capture toc %}
+    <li><a href="#_etc">{{ include.ungrouped_title }}</a></li>
+  {% endcapture %}
+  {% capture toc_result %}{{ toc_result }}{{ toc }}{% endcapture %}
+  {% capture contents %}
+    <li id="_etc">
+      <h2>{{ include.ungrouped_title }}</h2>
+      <ol reversed>
+        {{ ungrouped_contents_result }}
+      </ol>
+    </li>
+  {% endcapture %}
+  {% capture contents_result %}{{ contents_result }}{{ contents }}{% endcapture %}
 {% endif %}
+
+{{ toc_result }}
+
+<ul class="index {{ include.group_type }}">
+  {{ contents_result }}
+</ul>
