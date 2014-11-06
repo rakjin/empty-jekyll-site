@@ -2,5 +2,33 @@
 layout: base
 ---
 <article>
+
 {{ content }}
+
+{% if page.categories.size > 0 %}
+Posted in
+<ul class="group categories">
+  {% for category in page.categories %}
+  <li>
+    <a href="/categories.html#{{ category }}">{{ category }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if page.tags.size > 0 %}
+  {% if page.categories.size > 0 %}
+    with tags:
+  {% else %}
+    Tags:
+  {% endif %}
+<ul class="group tags">
+  {% for tag in page.tags %}
+  <li>
+    <a href="/tags.html#{{ tag }}">{{ tag }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
 </article>
