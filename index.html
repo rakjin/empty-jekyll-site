@@ -1,0 +1,10 @@
+---
+---
+<h1>Posts</h1>
+
+<ol reversed class="index">
+{% for post in site.posts %}
+  <li>{% include link_to_post.html post=post %}</li>
+{% endfor %}
+  <li><a href="http://hell-not-exists.com">not visited link</a></li>
+</ol>
