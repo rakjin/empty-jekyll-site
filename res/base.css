@@ -26,17 +26,37 @@ p { line-height: 1.7; }
 	header a:link,
 	footer,
 	footer a:link {
-		color: #aaa;
+		color: #ccc;
 		text-decoration: none;
 	}
 	header {
 		border-bottom: 1px solid #ddd;
 	}
 		.title {
+			float: left;
 			line-height: 0;
 		}
 		.title a {
 			color: #999;
+		}
+		nav {
+			float: right;
+		}
+			nav ul,
+			nav ol {
+				margin-bottom: 0;
+			}
+			nav li {
+				display: inline-block;
+				margin: 0 .5em;
+			}
+			nav a:link,
+			nav a:visited {
+				color: #999;
+			}
+		.description {
+			clear: both;
+			margin-top: 0;
 		}
 	footer {
 		text-align: right;
