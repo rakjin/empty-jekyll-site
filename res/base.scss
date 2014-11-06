@@ -92,69 +92,72 @@ pre, code, kbd, samp {
 	color: #999;
 	font-size: .8em;
 	margin-top: 3em;
-}
-.group ol,
-.group ul {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-}
 
-.group a:link,
-.group a:visited {
-	text-decoration: none;
-	color: #fff;
-}
+	ol,
+	ul {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+	}
 
-.group li {
-	display: inline-block;
-	background: #abc;
-	padding: .1em .3em;
-	border-radius: .3em;
-	border: 1px solid #9ab;
-}
-	.group .categories a:link,
-	.group .categories a:visited {
+	a:link,
+	a:visited {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	li {
+		display: inline-block;
+		background: #abc;
+		padding: .1em .3em;
+		border-radius: .3em;
+		border: 1px solid #9ab;
+	}
+
+	.categories a:link,
+	.categories a:visited {
 		color: #999;
 	}
-	.group .categories li {
+	.categories li {
 		background: #fed;
 		border-color: #edc;
 	}
+}
 
-ul.index,
-ol.index {
+
+ol.index,
+ul.index {
 	list-style: none;
 	padding: 0;
 }
-.index li {
-	margin: 0;
-	padding: .7em 1em .1em;
-}
-.index.tags > li,
-.index.categories > li {
-	padding-bottom: 1em;
-}
 
-.index li h1,
-.index li h2,
-.index li h3,
-.index li h4,
-.index li h5,
-.index li h6 {
-	margin: 0;
-	padding: 0;
-}
+.index {
 
-.index.tags li:target {
-	background: #f0fdff;
-	border: 1px dotted #def;
-}
-.index.categories li:target {
-	background: #fffdf0;
-	border: 1px dotted #fed;
-}
+	li {
+		margin: 0;
+		padding: .7em 1em .1em;
+	}
+	&.tags > li,
+	&.categories > li {
+		padding-bottom: 1em;
+	}
 
+	li {
+		h1, h2, h3, h4, h5, h6 {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	&.tags li:target {
+		background: #f0fdff;
+		border: 1px dotted #def;
+	}
+	&.categories li:target {
+		background: #fffdf0;
+		border: 1px dotted #fed;
+	}
+}
 
 
 @media (max-width: 736px) {
