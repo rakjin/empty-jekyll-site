@@ -4,8 +4,7 @@
 }
 
 body {
-	font-family: Helvetica, sans-serif;
-	background-color: #ddd;
+	font-family: Helvetica, 'Malgun Gothic', sans-serif;
 	color: #666;
 	overflow-y: scroll;
 }
@@ -14,13 +13,13 @@ a:link { color: #369; }
 a:visited { color: #639; }
 
 h1 { font-size: 1.7em; }
+p { line-height: 1.7; }
 
 .main {
-	background: #eee;
 	margin: 1em auto;
-	padding: 1em 1.9em .5em;
+	padding: 2em 3em 1em;
 	max-width: 40em;
-	border: .1em solid #ccc;
+	border: 1px solid #ddd;
 	border-radius: .5em;
 }
 	header,
@@ -31,7 +30,7 @@ h1 { font-size: 1.7em; }
 		text-decoration: none;
 	}
 	header {
-		border-bottom: .1em solid #ddd;
+		border-bottom: 1px solid #ddd;
 	}
 		.title {
 			line-height: 0;
