@@ -1,11 +1,9 @@
 
-<ul>
-
 {% assign groups = site[include.group_type] | sort %}
 
 {% for group in groups %}
   {% assign key = group[0] %}
-  <li>
+  <li id="{{ key }}">
     <h2>{{ key }}</h2>
     <ol reversed>
     {% for post in site[include.group_type][key] %}
@@ -31,5 +29,3 @@
 {% if ungrouped_posts_exist %}
   <li>{{ ungrouped }}</li>
 {% endif %}
-
-</ul>

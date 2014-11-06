@@ -115,6 +115,37 @@ pre, code, kbd, samp {
 		border-color: #edc;
 	}
 
+ul.index,
+ol.index {
+	list-style: none;
+	padding: 0;
+}
+.index > li {
+	margin: 0;
+	padding: .7em 1em .1em;
+}
+.index li h1,
+.index li h2,
+.index li h3,
+.index li h4,
+.index li h5,
+.index li h6 {
+	margin: 0;
+	padding: 0;
+}
+
+.index.tags li:target {
+	background: #f0fdff;
+	border: 1px solid #def;
+	border-radius: 1em;
+}
+.index.categories li:target {
+	background: #fffdf0;
+	border: 1px solid #fed;
+	border-radius: 1em;
+}
+
+
 
 @media (max-width: 736px) {
 

@@ -1,6 +1,8 @@
 ---
 title: Posts by tag
 ---
-# {{ page.title }}
+<h1>{{ page.title }}</h1>
 
-{% include groups.html group_type='tags' ungrouped_title='Untagged' %}
+<ul class="index tags">
+  {% include groups.html group_type='tags' ungrouped_title='Untagged' %}
+</ul>
