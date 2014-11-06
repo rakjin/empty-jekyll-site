@@ -1,18 +1,23 @@
 ---
 ---
 
+$primary-color: #666;
+
+$link-color: #369;
+$visited-color: #639;
+
 * {
 	box-sizing: border-box;
 }
 
 body {
 	font-family: Helvetica, 'Malgun Gothic', sans-serif;
-	color: #666;
+	color: $primary-color;
 	overflow-y: scroll;
 }
 
-a:link { color: #369; }
-a:visited { color: #639; }
+a:link { color: $link-color; }
+a:visited { color: $visited-color; }
 
 h1 { font-size: 1.7em; }
 p { line-height: 1.7; }
