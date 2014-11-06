@@ -1,6 +1,9 @@
 ---
+title: Nunc Bibendum Ultricies Odio
+category: bibendum
+tags: [sed, ipsum, magna]
 ---
-# Nunc Bibendum Ultricies Odio
+# {{ page.title }}
 
 Nunc bibendum ultricies odio. Donec vel congue turpis. Aenean rutrum sagittis lacus, ac dignissim nibh volutpat vitae. Fusce nec turpis sit amet tortor maximus volutpat. Sed sit amet venenatis nunc. Nam nec ex at mi ullamcorper elementum ac vitae nulla. In tempor auctor nulla, non pellentesque mi maximus nec. Etiam scelerisque sed erat quis vestibulum. Quisque dapibus ac magna quis malesuada. Suspendisse egestas sapien nec lacus faucibus efficitur. Proin tristique at nibh eu eleifend. Aliquam erat volutpat. In fermentum ullamcorper ultrices. Etiam malesuada ut ex nec ornare.
 

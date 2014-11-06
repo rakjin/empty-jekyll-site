@@ -1,6 +1,8 @@
 ---
+title: Hello, World!
+tags: [lorem, ipsum]
 ---
-# Hello, World!
+# {{ page.title }}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum, ex quis pellentesque posuere, quam nibh ultricies dolor, sit amet iaculis diam felis pulvinar arcu. Cras luctus lacinia est sit amet iaculis. Etiam at tellus dui. Integer enim nisi, ultricies a accumsan a, gravida et nibh. Aenean suscipit venenatis fringilla. Nulla ante lacus, maximus nec purus vel, ornare congue mi. Aenean vitae sagittis dolor. Ut rhoncus quam sit amet pharetra faucibus. Suspendisse pharetra venenatis augue, at bibendum leo rhoncus ac. Integer quis bibendum sapien. Donec et felis vitae velit iaculis venenatis sit amet vel lectus. Aenean non tincidunt nunc, at laoreet libero. Proin efficitur nisl vel ante facilisis sollicitudin.
 

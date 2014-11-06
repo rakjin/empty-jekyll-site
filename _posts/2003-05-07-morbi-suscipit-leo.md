@@ -1,6 +1,9 @@
 ---
+title: Morbi Suscipit Leo
+categories: [bibendum, essay]
+tags: [sed, magna]
 ---
-# Morbi Suscipit Leo
+# {{ page.title }}
 
 Morbi suscipit leo. Vestibulum ornare non magna et vulputate. Quisque vulputate arcu nisi. Suspendisse sodales elit vel rhoncus lobortis. Nullam mattis justo eu commodo ornare. Duis vestibulum tortor sit amet vulputate ornare. Mauris mattis tincidunt lacus, in dapibus mauris vehicula sed. Ut ut interdum eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget ex eu risus venenatis imperdiet maximus et lacus. Morbi gravida mauris id nisi rhoncus, condimentum laoreet dolor tempus. Morbi nec quam orci. Suspendisse sed purus est. Praesent eget egestas lectus. Vestibulum maximus ante in nisi feugiat, vitae gravida elit maximus. Maecenas sagittis lorem vitae lectus bibendum venenatis.
 
