@@ -1,6 +1,6 @@
 ---
 title: Hello, World!
-tags: [lorem, ipsum]
+tags: [lorem, ipsum, magna, tag-with-hyphens]
 ---
 # {{ page.title }}
 
