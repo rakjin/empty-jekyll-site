@@ -1,7 +1,7 @@
 ---
 title: Posts by tag
 ---
-<h1>{{ page.title }}</h1>
+# {{ page.title }}
 
 {% assign group_type = 'tags' %}
 {% assign ungrouped_title = 'Untagged' %}

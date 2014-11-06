@@ -1,7 +1,7 @@
 ---
 title: Posts by category
 ---
-<h1>{{ page.title }}</h1>
+# {{ page.title }}
 
 {% assign group_type = 'categories' %}
 {% assign ungrouped_title = 'Uncategorized' %}
