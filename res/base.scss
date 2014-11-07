@@ -89,6 +89,7 @@ pre, code, kbd, samp {
 		.description {
 			clear: both;
 			float: left;
+			font-size: .8em;
 			margin: .3em 0 0;
 		}
 	footer {
@@ -98,7 +99,6 @@ pre, code, kbd, samp {
 .group {
 	color: $muted-color-1;
 	font-size: .8em;
-	margin-top: 3em;
 
 	ol,
 	ul {
@@ -160,6 +160,13 @@ ul.index {
 		h1, h2, h3, h4, h5, h6 {
 			margin: 0;
 			padding: 0;
+			color: $muted-color-2;
+		}
+
+		&:target {
+			h1, h2, h3, h4, h5, h6 {
+				color: $primary-color;
+			}
 		}
 	}
 
