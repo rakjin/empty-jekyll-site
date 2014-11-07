@@ -68,9 +68,13 @@ pre, code, kbd, samp {
 	box-shadow: 0 1em 5em 0 #eee;
 }
 	header, footer {
-		&, & a:link {
-			color: $muted-color-2;
-			text-decoration: none;
+		color: $muted-color-2;
+		a:link, a:visited {
+			color: $muted-color-1;
+			border: 0;
+		}
+		a:hover {
+			color: $hover-color;
 		}
 	}
 	header {
@@ -82,10 +86,6 @@ pre, code, kbd, samp {
 			float: left;
 			line-height: 0;
 		}
-		.title a {
-			color: $muted-color-1;
-			border: 0;
-		}
 		nav {
 			float: right;
 
@@ -95,11 +95,6 @@ pre, code, kbd, samp {
 			li {
 				display: inline-block;
 				margin: 0 .5em;
-			}
-			a:link,
-			a:visited {
-				color: $muted-color-1;
-				border: 0;
 			}
 		}
 		.description {
