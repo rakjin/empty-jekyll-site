@@ -5,6 +5,8 @@ layout: base
 
 {{ content }}
 
+<p>{% include datetime.html date=page.date %}</p>
+
 <div class="group">
 {% if page.categories.size > 0 %}
   Posted in

@@ -1,6 +1,3 @@
 
 <a href="{{ include.post.url }}">{{ include.post.title }}</a>
-<span class="post-date">
-  {{ include.post.date | date_to_string }}
-</span>
-
+{% include datetime.html date=include.post.date %}
