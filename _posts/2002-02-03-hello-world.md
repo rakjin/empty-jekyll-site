@@ -1,6 +1,7 @@
 ---
 title: Hello, World!
-tags: [lorem, ipsum, magna, tag-with-hyphens]
+categories: [programming, essay]
+tags: [lorem, ipsum, magna, live-long-and-prosper]
 ---
 # {{ page.title }}
 

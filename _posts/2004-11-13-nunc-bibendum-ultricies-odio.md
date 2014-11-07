@@ -1,7 +1,7 @@
 ---
 title: Nunc Bibendum Ultricies Odio
 category: bibendum
-tags: [sed, ipsum, magna, tag-with-hyphens]
+tags: [sed, ipsum, magna, live-long-and-prosper]
 ---
 # {{ page.title }}
 
