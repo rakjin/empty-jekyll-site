@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, minimum-scale=1.0">
@@ -11,28 +11,28 @@
   {% endif %}
 </title>
 <link rel="stylesheet" href="//necolas.github.io/normalize.css/latest/normalize.css">
-<link rel="stylesheet" href="/res/base.css">
-<link rel="stylesheet" href="/res/syntax.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/res/base.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/res/syntax.css">
 </head>
 <body>
 
 <div class="main">
   <header>
     <h3 class="title">
-      <a href="/">
+      <a href="{{ site.baseurl }}/">
         {{ site.title }}
       </a>
     </h3>
     <nav>
       <ul>
         <li>
-          <a href="/">home</a>
+          <a href="{{ site.baseurl }}/">home</a>
         </li>
         <li>
-          <a href="/categories.html">categories</a>
+          <a href="{{ site.baseurl }}/categories.html">categories</a>
         </li>
         <li>
-          <a href="/tags.html">tags</a>
+          <a href="{{ site.baseurl }}/tags.html">tags</a>
         </li>
       </ul>
     </nav>

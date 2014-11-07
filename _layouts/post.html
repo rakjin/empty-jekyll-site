@@ -13,7 +13,7 @@ layout: base
   <ul class="categories">
   {% for category in page.categories %}
     <li>
-      <a href="/categories.html#{{ category }}">{{ category }}</a>
+      <a href="{{ site.baseurl }}/categories.html#{{ category }}">{{ category }}</a>
     </li>
   {% endfor %}
   </ul>
@@ -28,7 +28,7 @@ layout: base
   <ul class="tags">
   {% for tag in page.tags %}
     <li>
-      <a href="/tags.html#{{ tag }}">{{ tag }}</a>
+      <a href="{{ site.baseurl }}/tags.html#{{ tag }}">{{ tag }}</a>
     </li>
   {% endfor %}
   </ul>

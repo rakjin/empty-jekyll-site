@@ -1,10 +1,12 @@
+baseurl: '/empty-jekyll-site'
+
 title:
   'my empty site'
 description:
   'aenean congue dui a lectus aliquam, quis imperdiet purus dignissim.'
 author:
   name: 'John Appleseed'
-  url: '/'
+  url: 'mailto:john@example.com'
 
 defaults:
   -
