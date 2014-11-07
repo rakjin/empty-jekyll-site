@@ -7,7 +7,7 @@
   {% if page.title %}
     {{ page.title }}
   {% else %}
-    {{ site.data.info.title }}
+    {{ site.title }}
   {% endif %}
 </title>
 <link rel="stylesheet" href="//necolas.github.io/normalize.css/latest/normalize.css">
@@ -20,7 +20,7 @@
   <header>
     <h3 class="title">
       <a href="/">
-        {{ site.data.info.title }}
+        {{ site.title }}
       </a>
     </h3>
     <nav>
@@ -36,8 +36,8 @@
         </li>
       </ul>
     </nav>
-    {% if site.data.info.description %}
-      <p class="description">{{ site.data.info.description }}</p>
+    {% if site.description %}
+      <p class="description">{{ site.description }}</p>
     {% endif %}
   </header>
 
@@ -45,12 +45,12 @@
 
   <footer>
     <p>
-      {% if site.data.info.author.url %}
-        <a href="{{ site.data.info.author.url }}">
-          {{ site.data.info.author.name }}
+      {% if site.author.url %}
+        <a href="{{ site.author.url }}">
+          {{ site.author.name }}
         </a>
       {% else %}
-        {{ site.data.info.author.name }}
+        {{ site.author.name }}
       {% endif %}
     </p>
   </footer>
