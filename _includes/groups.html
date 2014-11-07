@@ -1,15 +1,17 @@
 
 {% assign groups = site[include.group_type] | sort %}
-{% assign toc_result = '' %}
-{% assign contents_result = '' %}
+{% assign toc = '' %}
+{% assign index = '' %}
 
 {% for group in groups %}
   {% assign key = group[0] %}
-  {% capture toc %}
+
+  {% capture item %}
     <li><a href="#{{ key }}">{{ key }}</a></li>
   {% endcapture %}
-  {% capture toc_result %}{{ toc_result }}{{ toc }}{% endcapture %}
-  {% capture contents %}
+  {% capture toc %}{{ toc }}{{ item }}{% endcapture %}
+
+  {% capture item %}
     <li id="{{ key }}">
       <h2>{{ key }}</h2>
       <ol reversed>
@@ -19,47 +21,46 @@
       </ol>
     </li>
   {% endcapture %}
-  {% capture contents_result %}{{ contents_result }}{{ contents }}{% endcapture %}
+  {% capture index %}{{ index }}{{ item }}{% endcapture %}
+
 {% endfor %}
 
 {% assign ungrouped_posts_exist = false %}
-{% assign ungrouped_contents_result = '' %}
+{% assign ungrouped_index = '' %}
 {% for post in site.posts %}
   {% if post[include.group_type].size == 0 %}
     {% assign ungrouped_posts_exist = true %}
-    {% capture ungrouped_contents %}
+    {% capture item %}
       <li>{% include link_to_post.html post=post %}</li>
     {% endcapture %}
-    {% capture ungrouped_contents_result %}
-      {{ ungrouped_contents_result }}
-      {{ ungrouped_contents }}
-    {% endcapture %}
+    {% capture ungrouped_index %}{{ ungrouped_index }}{{ item }}{% endcapture %}
   {% endif %}
 {% endfor %}
 
 {% if ungrouped_posts_exist %}
-  {% capture toc %}
+  {% capture item %}
     <li><a href="#_etc">{{ include.ungrouped_title }}</a></li>
   {% endcapture %}
-  {% capture toc_result %}{{ toc_result }}{{ toc }}{% endcapture %}
-  {% capture contents %}
+  {% capture toc %}{{ toc }}{{ item }}{% endcapture %}
+
+  {% capture item %}
     <li id="_etc">
       <h2>{{ include.ungrouped_title }}</h2>
       <ol reversed>
-        {{ ungrouped_contents_result }}
+        {{ ungrouped_index }}
       </ol>
     </li>
   {% endcapture %}
-  {% capture contents_result %}{{ contents_result }}{{ contents }}{% endcapture %}
+  {% capture index %}{{ index }}{{ item }}{% endcapture %}
 {% endif %}
 
 
 <div class="group toc">
   <ul class="{{ include.group_type }}">
-    {{ toc_result }}
+    {{ toc }}
   </ul>
 </div>
 
 <ul class="index {{ include.group_type }}">
-  {{ contents_result }}
+  {{ index }}
 </ul>
