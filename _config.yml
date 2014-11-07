@@ -1,4 +1,5 @@
 baseurl: '/empty-jekyll-site'
+permalink: /:year/:month/:title.html
 
 title:
   'my empty site'
@@ -20,4 +21,3 @@ defaults:
       type: posts
     values:
       layout: post
-      permalink: /:year/:month/:title.html
