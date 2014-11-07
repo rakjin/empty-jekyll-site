@@ -6,7 +6,12 @@ $muted-color-1: #999;
 $muted-color-2: #ccc;
 
 $link-color: #369;
-$visited-color: #639;
+$visited-color: #936;
+$hover-color: #333;
+
+$link-underline-color: #cde;
+$visited-underline-color: #ecd;
+$hover-underline-color: #333;
 
 $bluish: #abc;
 $yellowish: #fed;
@@ -14,9 +19,7 @@ $yellowish: #fed;
 $tag-color: $bluish;
 $cat-color: $yellowish;
 
-* {
-	box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
 	font-family: Helvetica, 'Malgun Gothic', sans-serif;
@@ -24,8 +27,19 @@ body {
 	overflow-y: scroll;
 }
 
-a:link { color: $link-color; }
-a:visited { color: $visited-color; }
+a:link {
+	color: $link-color;
+	text-decoration: none;
+	border-bottom: 1px solid $link-underline-color;
+}
+a:visited {
+	color: $visited-color;
+	border-color: $visited-underline-color;
+}
+a:hover {
+	color: $hover-color;
+	border-color: $hover-underline-color;
+}
 
 h1 { font-size: 1.7em; }
 p { line-height: 1.7; }
@@ -70,6 +84,7 @@ pre, code, kbd, samp {
 		}
 		.title a {
 			color: $muted-color-1;
+			border: 0;
 		}
 		nav {
 			float: right;
@@ -84,6 +99,7 @@ pre, code, kbd, samp {
 			a:link,
 			a:visited {
 				color: $muted-color-1;
+				border: 0;
 			}
 		}
 		.description {
@@ -94,6 +110,10 @@ pre, code, kbd, samp {
 		}
 	footer {
 		text-align: right;
+		
+		a:link {
+			border: 0;
+		}
 	}
 
 .group {
@@ -109,7 +129,7 @@ pre, code, kbd, samp {
 
 	a:link,
 	a:visited {
-		text-decoration: none;
+		border: 0;
 		color: #fff;
 	}
 
@@ -148,35 +168,58 @@ ul.index {
 		margin: 0;
 		padding: .7em 1em .1em;
 	}
-	&.tags, &.categories {
-		& li > ol, & li > ul {
+
+	&.tags,
+	&.categories {
+		li > ol,
+		li > ul {
 			list-style: none;
 			padding: 0;
 		}
+
 		& > li { padding-bottom: 1em; }
-	}
 
-	li {
-		h1, h2, h3, h4, h5, h6 {
-			margin: 0;
-			padding: 0;
-			color: $muted-color-2;
-		}
-
-		&:target {
+		li {
 			h1, h2, h3, h4, h5, h6 {
-				color: $primary-color;
+				margin: 0;
+				padding: 0;
+				a:link, a:visited, a:hover {
+					border: 0;
+				}
 			}
 		}
-	}
+		li:not(:target) {
+			a:link, a:visited {
+				color: $muted-color-1;
+				border-color: $muted-color-2;
+			}
+			h1, h2, h3, h4, h5, h6 {
+				a:link, a:visited {
+					color: $muted-color-2;
+				}
+				a:hover {
+					color: $hover-color;
+				}
+			}
+			a:hover {
+				color: $hover-color;
+				border-color: $hover-underline-color;
+			}
+		}
+		li:target {
+			a:link { color: $link-color; }
+			a:visited { color: $visited-color; }
+			a:hover { color: $hover-color; }
 
-	&.tags li:target {
-		background: $tag-color*1.37;
-		border: 1px dotted $tag-color*1.2;
-	}
-	&.categories li:target {
-		background: $cat-color*1.05;
-		border: 1px dotted $cat-color*.9;
+			h1, h2, h3, h4, h5, h6 {
+				a:link, a:visited {
+					color: $primary-color;
+				}
+				a:hover {
+					color: $hover-color;
+				}
+			}
+		}
 	}
 }
 
