@@ -116,6 +116,7 @@ pre, code, kbd, samp {
 	li {
 		display: inline-block;
 		background: $tag-color;
+		margin: .2em 0;
 		padding: .1em .3em;
 		border-radius: .3em;
 		border: 1px solid $tag-color*.9;
