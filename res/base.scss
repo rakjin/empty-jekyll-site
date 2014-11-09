@@ -50,6 +50,12 @@ p { line-height: 1.7; }
 	color: $muted-color-2;
 }
 
+.draft-label {
+	float: right;
+	color: $muted-color-2;
+	margin-left: .5em;
+}
+
 pre {
 	padding: .5em .7em;
 	background: #f7f7f7;
