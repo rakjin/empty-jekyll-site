@@ -1,38 +1,5 @@
 ---
 layout: base
 ---
-<article>
 
-{{ content }}
-
-<p>{% include datetime.html date=page.date %}</p>
-
-<div class="group">
-{% if page.categories.size > 0 %}
-  Posted in
-  <ul class="categories">
-  {% for category in page.categories %}
-    <li>
-      <a href="{{ site.baseurl }}/categories.html#{{ category }}">{{ category }}</a>
-    </li>
-  {% endfor %}
-  </ul>
-{% endif %}
-
-{% if page.tags.size > 0 %}
-  {% if page.categories.size > 0 %}
-    with tags:
-  {% else %}
-    Tags:
-  {% endif %}
-  <ul class="tags">
-  {% for tag in page.tags %}
-    <li>
-      <a href="{{ site.baseurl }}/tags.html#{{ tag }}">{{ tag }}</a>
-    </li>
-  {% endfor %}
-  </ul>
-{% endif %}
-</div>
-
-</article>
+{% include article.html page=page %}
