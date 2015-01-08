@@ -4,6 +4,7 @@
 $primary-color: #666;
 $muted-color-1: #999;
 $muted-color-2: #ccc;
+$muted-color-3: #eee;
 
 $link-color: #369;
 $visited-color: #936;
@@ -43,6 +44,7 @@ a:hover {
 
 h1 { font-size: 1.7em; }
 p { line-height: 1.7; }
+li { line-height: 1.5; }
 
 .post-date {
 	margin-left: .5em;
@@ -58,11 +60,11 @@ p { line-height: 1.7; }
 
 pre {
 	padding: .5em .7em;
-	background: #f7f7f7;
 }
 
 pre, code, kbd, samp {
 	font-family: Menlo, Monaco, 'Courier New', monospace;
+	background: $muted-color-3;
 }
 
 .main {
@@ -100,6 +102,7 @@ pre, code, kbd, samp {
 			}
 			li {
 				display: inline-block;
+				line-height: normal;
 				margin: 0 .5em;
 			}
 		}
@@ -136,6 +139,7 @@ pre, code, kbd, samp {
 
 	li {
 		display: inline-block;
+		line-height: normal;
 		background: $tag-color;
 		margin: .2em 0;
 		padding: .1em .3em;
