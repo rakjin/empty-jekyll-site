@@ -16,6 +16,7 @@ IEnumerator Start()
 {
 	Debug.Log("Hello,");
 	yield return new WaitForSeconds(3);
+	Debug.Log("그러므로 청춘은 소담스러운 봄바람이다.");
 	Debug.Log("World!");
 }
 

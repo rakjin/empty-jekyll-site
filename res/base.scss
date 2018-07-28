@@ -4,7 +4,6 @@
 $primary-color: #666;
 $muted-color-1: #999;
 $muted-color-2: #ccc;
-$muted-color-3: #eee;
 
 $link-color: #369;
 $visited-color: #936;
@@ -58,13 +57,20 @@ li { line-height: 1.5; }
 	margin-left: .5em;
 }
 
-pre {
-	padding: .5em .7em;
+.highlight {
+	display: inline-block;
+	background: white;
+	max-width: 100%;
+	overflow-x: auto;
+	margin: .5em;
+}
+
+.highlight pre {
+	margin: 0;
 }
 
 pre, code, kbd, samp {
 	font-family: Menlo, Monaco, 'Courier New', monospace;
-	background: $muted-color-3;
 }
 
 .main {
